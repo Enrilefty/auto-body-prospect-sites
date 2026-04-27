@@ -1,269 +1,763 @@
-<!-- Generated 2026-04-26 by TARS design-gen -->
-<!DOCTYPE html>
+<!-- Generated 2026-04-27 by Vega premium design pass -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bear Collision Service — Auto Body Repair in Corona, CA</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            accent: '#c0392b',
-            'accent-dark': '#a93226',
-            neutral: {
-              50: '#faf9f7',
-              100: '#f3f1ed',
-              200: '#e8e4dd',
-              800: '#2c2c2c',
-              900: '#1a1a1a',
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          }
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bear Collision Service | Collision Repair in Corona, CA</title>
+  <meta name="description" content="A premium preview website concept for Bear Collision Service in Corona, CA. Collision repair, paint, body work, and estimate-focused conversion flow.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0c0d0f;
+      --panel: #15171a;
+      --panel-2: #202226;
+      --paper: #f6f0e8;
+      --muted: #b8b0a5;
+      --line: rgba(246, 240, 232, 0.14);
+      --red: #ff3f31;
+      --red-2: #b91912;
+      --steel: #8ea0ad;
+      --amber: #f4b84a;
+      --green: #48d18b;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--ink);
+    }
+
+    body {
+      margin: 0;
+      color: var(--paper);
+      font-family: Inter, system-ui, sans-serif;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        radial-gradient(circle at 68% 0%, rgba(255,63,49,0.18), transparent 34rem),
+        var(--ink);
+      background-size: 84px 84px, 84px 84px, auto, auto;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(12,13,15,0.06), rgba(12,13,15,0.84));
+      z-index: -1;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(12, 13, 15, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      border: 1px solid rgba(255,63,49,0.42);
+      background: linear-gradient(145deg, #2a1110, #120908);
+      color: var(--red);
+      font: 700 20px/1 Oswald, sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--paper);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      color: var(--paper);
+      text-decoration: none;
+      font-weight: 900;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,63,49,0.58);
+      background: rgba(255,63,49,0.14);
+    }
+
+    .button.primary {
+      border-color: rgba(255,63,49,0.65);
+      background: linear-gradient(135deg, var(--red), var(--red-2));
+      box-shadow: 0 18px 50px rgba(255,63,49,0.24);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 74px);
+      display: grid;
+      align-items: center;
+      padding: 72px 0 42px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+      align-items: center;
+      gap: 44px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: Oswald, Inter, sans-serif;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(58px, 10vw, 132px);
+      line-height: .88;
+      max-width: 780px;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 24px 0 0;
+      color: #ddd5cc;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 34px;
+      max-width: 700px;
+    }
+
+    .trust-item {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: rgba(255,255,255,0.045);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .visual-card {
+      position: relative;
+      min-height: 540px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background:
+        linear-gradient(rgba(12,13,15,0.22), rgba(12,13,15,0.72)),
+        url("https://images.unsplash.com/photo-1632823469843-4897ffd5d1ad?auto=format&fit=crop&w=1200&q=78");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .visual-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 0%, transparent 38%, rgba(255,255,255,0.18) 48%, transparent 58%, transparent 100%);
+      transform: translateX(-120%);
+      animation: paintSweep 5.8s ease-in-out infinite;
+    }
+
+    .diagnostic {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 20px;
+      background: rgba(12,13,15,0.74);
+      backdrop-filter: blur(16px);
+    }
+
+    .diagnostic-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 44px;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.12);
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      width: var(--w);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--red), var(--amber));
+    }
+
+    .section {
+      padding: 104px 0;
+      border-top: 1px solid rgba(246,240,232,0.08);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(38px, 7vw, 84px);
+      line-height: .94;
+      max-width: 780px;
+    }
+
+    .section-head p {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .process-grid,
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .step,
+    .service,
+    .proof-card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+      padding: 22px;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .step:hover,
+    .service:hover,
+    .proof-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,63,49,0.45);
+      background: linear-gradient(180deg, rgba(255,63,49,0.10), rgba(255,255,255,0.03));
+    }
+
+    .number {
+      color: var(--red);
+      font: 700 34px/1 Oswald, sans-serif;
+    }
+
+    .step h3,
+    .service h3 {
+      margin-top: 18px;
+      font-size: 22px;
+    }
+
+    .step p,
+    .service p,
+    .proof-card p {
+      color: var(--muted);
+      line-height: 1.62;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .before-after {
+      position: relative;
+      min-height: 480px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      background: #121315;
+      box-shadow: var(--shadow);
+    }
+
+    .panel-before,
+    .panel-after {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-content: end;
+      padding: 28px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .panel-before {
+      background-image:
+        linear-gradient(rgba(12,13,15,0.14), rgba(12,13,15,0.88)),
+        url("https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=1200&q=76");
+    }
+
+    .panel-after {
+      clip-path: inset(0 0 0 52%);
+      background-image:
+        linear-gradient(rgba(12,13,15,0.05), rgba(12,13,15,0.78)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=78");
+    }
+
+    .slider-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 52%;
+      width: 3px;
+      background: var(--red);
+      box-shadow: 0 0 30px rgba(255,63,49,0.58);
+    }
+
+    .slider-knob {
+      position: absolute;
+      top: 50%;
+      left: 52%;
+      translate: -50% -50%;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: var(--red);
+      box-shadow: 0 16px 40px rgba(255,63,49,0.28);
+    }
+
+    .compare-range {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+    }
+
+    .proof-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .large-text {
+      font: 700 clamp(36px, 7vw, 84px)/.92 Oswald, sans-serif;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .location-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .map-card {
+      min-height: 420px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(12,13,15,0.12), rgba(12,13,15,0.72)),
+        url("https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=75");
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      background: var(--paper);
+      color: #151515;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      color: #151515;
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: .9;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+      color: #36312b;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(12,13,15,0.18);
+      border-radius: 14px;
+      padding: 14px;
+      font: inherit;
+      background: #fffaf3;
+      color: #151515;
+    }
+
+    .field textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    .footer {
+      padding: 34px 0 110px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    .mobile-cta {
+      position: fixed;
+      z-index: 40;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      display: none;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      background: rgba(12,13,15,0.86);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-cta .button {
+      flex: 1;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes paintSweep {
+      0%, 38% { transform: translateX(-120%); }
+      62%, 100% { transform: translateX(120%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
       }
     }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    html { scroll-behavior: smooth; }
-    .hero-bg {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 60%, #3d2020 100%);
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .comparison,
+      .location-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-card,
+      .before-after,
+      .map-card {
+        min-height: 420px;
+      }
+
+      .process-grid,
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+
+      .trust-strip,
+      .process-grid,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-head {
+        display: grid;
+      }
+
+      .mobile-cta {
+        display: flex;
+      }
     }
   </style>
 </head>
-<body class="font-sans text-neutral-800 bg-neutral-50">
-
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-200 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <span class="text-accent font-bold text-xl tracking-tight">🐻 Bear Collision</span>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#">
+        <span class="brand-badge">BC</span>
+        <span>Bear Collision Service</span>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm font-medium text-neutral-700">
-        <a href="#services" class="hover:text-accent transition-colors">Services</a>
-        <a href="#about" class="hover:text-accent transition-colors">About</a>
-        <a href="#hours" class="hover:text-accent transition-colors">Hours</a>
-        <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
-      </nav>
-      <a href="mailto:info@bearcollisionservice.com"
-         class="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors">
-        Get an Estimate
-      </a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="#process">Process</a>
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="button primary" href="mailto:info@bearcollisionservice.com?subject=Estimate%20request">Request Estimate</a>
     </div>
-  </header>
+  </nav>
 
-  <!-- HERO -->
-  <section class="hero-bg text-white py-24 md:py-36 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Corona, CA · Serving the Inland Empire</p>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
-        Expert Collision Repair<br class="hidden md:block" /> You Can Trust
-      </h1>
-      <p class="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto mb-8">
-        Bear Collision Service restores your vehicle to factory condition — fast, accurate, and backed by years of hands-on experience at 413 E Grand Blvd, Corona.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="mailto:info@bearcollisionservice.com"
-           class="bg-accent hover:bg-accent-dark text-white font-bold text-lg px-8 py-4 rounded-2xl transition-colors shadow-lg">
-          Request a Free Estimate
-        </a>
-        <a href="#services"
-           class="bg-white/10 hover:bg-white/20 text-white font-semibold text-lg px-8 py-4 rounded-2xl border border-white/30 transition-colors">
-          See Our Services
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST BAR -->
-  <section class="bg-white border-b border-neutral-100 py-6 px-4">
-    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div>
-        <p class="text-2xl font-extrabold text-accent">⭐ 5.0</p>
-        <p class="text-sm text-neutral-600 mt-1">Yelp Rating</p>
-      </div>
-      <div>
-        <p class="text-2xl font-extrabold text-neutral-800">GEICO</p>
-        <p class="text-sm text-neutral-600 mt-1">Approved Shop</p>
-      </div>
-      <div>
-        <p class="text-2xl font-extrabold text-neutral-800">All Makes</p>
-        <p class="text-sm text-neutral-600 mt-1">Domestic & Import</p>
-      </div>
-      <div>
-        <p class="text-2xl font-extrabold text-neutral-800">Free</p>
-        <p class="text-sm text-neutral-600 mt-1">Written Estimates</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="py-20 px-4 bg-neutral-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-3">What We Do</h2>
-        <p class="text-neutral-600 max-w-xl mx-auto">From minor dents to major collision damage, we handle it all — every job done right the first time.</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">🔧</div>
-          <h3 class="text-lg font-bold mb-2">Collision Repair</h3>
-          <p class="text-neutral-600 text-sm">Full structural and cosmetic repair after accidents, restoring your vehicle to pre-collision condition.</p>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="kicker">Corona collision repair</span>
+          <h1>From impact to exact finish.</h1>
+          <p class="hero-copy">
+            A sharper website concept for Bear Collision Service: built around fast estimates,
+            clear repair steps, and the trust a driver needs after an accident.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:info@bearcollisionservice.com?subject=Estimate%20request">Start an Estimate</a>
+            <a class="button" href="#process">See the repair path</a>
+          </div>
+          <div class="trust-strip" aria-label="Trust cues">
+            <div class="trust-item"><strong>413 E Grand Blvd</strong><span>Corona, California</span></div>
+            <div class="trust-item"><strong>Collision focused</strong><span>Body, paint, repair flow</span></div>
+            <div class="trust-item"><strong>Estimate first</strong><span>Clear next step, no pricing shown</span></div>
+          </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">🎨</div>
-          <h3 class="text-lg font-bold mb-2">Auto Painting</h3>
-          <p class="text-neutral-600 text-sm">Computer-matched color blending and full or partial respray so your paint looks factory-perfect.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">🪛</div>
-          <h3 class="text-lg font-bold mb-2">Dent & Scratch Repair</h3>
-          <p class="text-neutral-600 text-sm">Paintless dent removal and surface scratch correction — no filler, no shortcuts, no oversized bills.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">🪟</div>
-          <h3 class="text-lg font-bold mb-2">Frame & Structural Work</h3>
-          <p class="text-neutral-600 text-sm">Precision frame straightening with modern equipment to bring your vehicle's geometry back to spec.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">📋</div>
-          <h3 class="text-lg font-bold mb-2">Insurance Claims Assistance</h3>
-          <p class="text-neutral-600 text-sm">We work directly with your insurance company to make the claims process smooth and stress-free.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">
-          <div class="text-4xl mb-4">✅</div>
-          <h3 class="text-lg font-bold mb-2">Free Written Estimates</h3>
-          <p class="text-neutral-600 text-sm">Know exactly what to expect before work begins. Honest assessments, no hidden charges.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-20 px-4 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Corona's Neighborhood Body Shop</h2>
-      <p class="text-lg text-neutral-600 mb-5 leading-relaxed">
-        Bear Collision Service has been taking care of drivers in Corona and the surrounding Inland Empire for years. We're a hands-on, family-oriented shop — not a big-chain production line. Every car that comes through our doors gets personal attention from technicians who take pride in their craft.
-      </p>
-      <p class="text-lg text-neutral-600 mb-5 leading-relaxed">
-        We're a GEICO-approved repair facility, which means your insurer trusts our work. Our customers keep coming back — and sending their families and friends — because we do the job right and treat people fairly. That's the Bear Collision difference.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4 mt-8">
-        <span class="bg-neutral-100 text-neutral-700 text-sm font-semibold px-4 py-2 rounded-full">GEICO Approved</span>
-        <span class="bg-neutral-100 text-neutral-700 text-sm font-semibold px-4 py-2 rounded-full">All Insurance Accepted</span>
-        <span class="bg-neutral-100 text-neutral-700 text-sm font-semibold px-4 py-2 rounded-full">Domestic & Import</span>
-        <span class="bg-neutral-100 text-neutral-700 text-sm font-semibold px-4 py-2 rounded-full">Locally Owned</span>
-        <span class="bg-neutral-100 text-neutral-700 text-sm font-semibold px-4 py-2 rounded-full">5-Star Yelp Reviews</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOURS & LOCATION -->
-  <section id="hours" class="py-20 px-4 bg-neutral-50">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-      <div>
-        <h2 class="text-3xl font-extrabold mb-6">Hours & Location</h2>
-        <div class="bg-white rounded-2xl shadow-sm border border-neutral-100 overflow-hidden mb-6">
-          <table class="w-full text-sm">
-            <tbody>
-              <tr class="border-b border-neutral-100">
-                <td class="px-5 py-3 font-semibold text-neutral-700">Monday – Friday</td>
-                <td class="px-5 py-3 text-neutral-600">8:00 AM – 5:30 PM</td>
-              </tr>
-              <tr class="border-b border-neutral-100">
-                <td class="px-5 py-3 font-semibold text-neutral-700">Saturday</td>
-                <td class="px-5 py-3 text-neutral-600">9:00 AM – 2:00 PM</td>
-              </tr>
-              <tr>
-                <td class="px-5 py-3 font-semibold text-neutral-700">Sunday</td>
-                <td class="px-5 py-3 text-neutral-500">Closed</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="flex items-start gap-3 text-neutral-700">
-          <span class="text-2xl">📍</span>
-          <div>
-            <p class="font-semibold">413 E Grand Blvd</p>
-            <p>Corona, CA 92879</p>
-            <a href="https://maps.google.com/?q=413+E+Grand+Blvd+Corona+CA+92879"
-               target="_blank" rel="noopener"
-               class="text-accent text-sm font-medium hover:underline mt-1 inline-block">
-              Get Directions →
-            </a>
+        <div class="visual-card reveal" aria-label="Auto body workshop visual">
+          <div class="diagnostic">
+            <div class="diagnostic-row"><span>damage scan</span><div class="bar"><span style="--w: 76%"></span></div><strong>76</strong></div>
+            <div class="diagnostic-row"><span>paint match</span><div class="bar"><span style="--w: 91%"></span></div><strong>91</strong></div>
+            <div class="diagnostic-row"><span>finish prep</span><div class="bar"><span style="--w: 64%"></span></div><strong>64</strong></div>
           </div>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-sm border border-neutral-100 h-64 md:h-80">
-        <iframe
-          title="Bear Collision Service location map"
-          width="100%"
-          height="100%"
-          style="border:0"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-117.5769%2C33.8680%2C-117.5469%2C33.8880&layer=mapnik&marker=33.878%2C-117.5619">
-        </iframe>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 px-4 bg-white">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Get a Free Estimate</h2>
-      <p class="text-neutral-600 mb-8">Send us a message and we'll get back to you quickly — usually the same business day.</p>
-      <form action="mailto:info@bearcollisionservice.com" method="GET" class="space-y-4 text-left">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <input type="text" name="name" placeholder="Your Name"
-            class="w-full border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/40" />
-          <input type="tel" name="phone" placeholder="Phone Number"
-            class="w-full border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/40" />
+    <section id="process" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Make the repair feel simple.</h2>
+          <p>The page turns a stressful post-accident moment into a clear path: request, inspect, repair, return.</p>
         </div>
-        <input type="text" name="subject" placeholder="Vehicle Year, Make & Model"
-          class="w-full border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/40" />
-        <textarea name="body" placeholder="Describe the damage or what you need..." rows="4"
-          class="w-full border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/40 resize-none"></textarea>
-        <button type="submit"
-          class="w-full bg-accent hover:bg-accent-dark text-white font-bold text-base py-4 rounded-2xl transition-colors shadow-md">
-          Send Message
-        </button>
-      </form>
-      <p class="text-neutral-400 text-xs mt-4">We respond within one business day. No spam, ever.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-neutral-900 text-neutral-400 py-10 px-4">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>
-        <p class="text-white font-bold text-lg">🐻 Bear Collision Service</p>
-        <p class="text-sm mt-1">413 E Grand Blvd · Corona, CA 92879</p>
+        <div class="process-grid">
+          <article class="step reveal"><div class="number">01</div><h3>Request</h3><p>Drivers land on one obvious action: send photos, describe damage, or ask for an estimate.</p></article>
+          <article class="step reveal"><div class="number">02</div><h3>Inspect</h3><p>The shop reviews visible damage and gives the next practical step without burying people in forms.</p></article>
+          <article class="step reveal"><div class="number">03</div><h3>Repair</h3><p>Collision, paint, dent, panel, and frame messaging is grouped by what drivers actually understand.</p></article>
+          <article class="step reveal"><div class="number">04</div><h3>Return</h3><p>The final promise is simple: a cleaner handoff and a car that feels right again.</p></article>
+        </div>
       </div>
-      <nav class="flex gap-6 text-sm">
-        <a href="#services" class="hover:text-white transition-colors">Services</a>
-        <a href="#about" class="hover:text-white transition-colors">About</a>
-        <a href="#hours" class="hover:text-white transition-colors">Hours</a>
-        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-      </nav>
-      <p class="text-xs text-neutral-600">© 2026 Bear Collision Service. All rights reserved.</p>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Services with intent.</h2>
+          <p>Not a pile of generic cards. Each service answers a driver concern and pushes toward an estimate.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service reveal"><h3>Collision Repair</h3><p>For accident damage, structural checks, and panel replacement after an impact.</p></article>
+          <article class="service reveal"><h3>Paint Matching</h3><p>Messaging focuses on clean blends and a finish that does not announce the repair.</p></article>
+          <article class="service reveal"><h3>Dent and Scratch</h3><p>Clear language for lighter damage, bumper scuffs, fender marks, and parking-lot hits.</p></article>
+          <article class="service reveal"><h3>Insurance Flow</h3><p>The site can guide claim questions without pretending to handle details not confirmed by the shop.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap comparison">
+        <div class="before-after reveal" id="comparison">
+          <div class="panel-before"><span class="kicker">Before</span><p class="large-text">Damage mapped.</p></div>
+          <div class="panel-after" id="afterPanel"><span class="kicker">After</span><p class="large-text">Finish restored.</p></div>
+          <div class="slider-line" id="sliderLine"></div>
+          <div class="slider-knob" id="sliderKnob" aria-hidden="true"></div>
+          <input class="compare-range" id="compareRange" aria-label="Before and after slider" type="range" min="8" max="92" value="52">
+        </div>
+        <div class="proof-grid">
+          <article id="proof" class="proof-card reveal"><span class="kicker">Why this works</span><h2>It sells trust before style.</h2><p>Drivers do not need a flashy paragraph. They need confidence, location clarity, and a clear way to start.</p></article>
+          <article class="proof-card reveal"><h3>Local signal</h3><p>Corona address is visible above the fold and repeated near the contact section.</p></article>
+          <article class="proof-card reveal"><h3>Honest data</h3><p>When phone, hours, or warranty data is missing, the design uses placeholders instead of fake claims.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap location-panel">
+        <div class="map-card reveal" role="img" aria-label="Road and automotive location visual"></div>
+        <div class="contact-card reveal" id="contact">
+          <span class="kicker">Request an estimate</span>
+          <h2>Tell us what happened.</h2>
+          <p>Use this form concept to collect damage details, vehicle info, and photos in a real production build.</p>
+          <form class="form-grid">
+            <label class="field">Name<input type="text" placeholder="Your name"></label>
+            <label class="field">Vehicle<input type="text" placeholder="Year, make, model"></label>
+            <label class="field">Damage<textarea placeholder="Describe the damage"></textarea></label>
+            <a class="button primary" href="mailto:info@bearcollisionservice.com?subject=Estimate%20request">Send Estimate Request</a>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <strong>Bear Collision Service</strong>
+      <p>413 E Grand Blvd, Corona, CA 92879. Preview concept generated for review.</p>
     </div>
   </footer>
 
+  <div class="mobile-cta">
+    <a class="button" href="#services">Services</a>
+    <a class="button primary" href="mailto:info@bearcollisionservice.com?subject=Estimate%20request">Estimate</a>
+  </div>
+
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+    const range = document.getElementById('compareRange');
+    const afterPanel = document.getElementById('afterPanel');
+    const sliderLine = document.getElementById('sliderLine');
+    const sliderKnob = document.getElementById('sliderKnob');
+    function updateCompare() {
+      const value = range.value;
+      afterPanel.style.clipPath = `inset(0 0 0 ${value}%)`;
+      sliderLine.style.left = `${value}%`;
+      sliderKnob.style.left = `${value}%`;
+    }
+    range.addEventListener('input', updateCompare);
+    updateCompare();
+  </script>
 </body>
 </html>
