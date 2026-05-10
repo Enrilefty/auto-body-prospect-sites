@@ -47,8 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const animatedSelectors = [
     '.section > .wrap',
+    '.section-head',
     '.card',
+    '.service-card',
     '.route-strip > *',
+    '.process .card',
     '.feature-band',
     '.story-photo',
     '.contact-card',
@@ -57,14 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
     '.metric-card'
   ];
   const animatedElements = Array.from(document.querySelectorAll(animatedSelectors.join(',')))
-    .filter((element) => !element.closest('.mobile-menu'));
+    .filter((element, index, list) => !element.closest('.mobile-menu') && list.indexOf(element) === index);
 
   if (!reduceMotion && animatedElements.length) {
     animatedElements.forEach((element, index) => {
       const isPhoto = element.classList.contains('story-photo');
       const isPanel = element.classList.contains('footer-cta-panel') || element.classList.contains('feature-band');
-      element.classList.add(isPhoto ? 'anim-left' : isPanel ? 'anim-scale' : 'anim-fade');
-      element.style.transitionDelay = `${Math.min(index % 4, 3) * 60}ms`;
+      const isLeft = isPhoto || element.matches('.route-strip > *:nth-child(odd)') || element.matches('.process .card:nth-child(odd)');
+      const isRight = element.matches('.route-strip > *:nth-child(even)') || element.matches('.process .card:nth-child(even)') || element.classList.contains('contact-card');
+      element.classList.add(isPanel ? 'anim-scale' : isLeft ? 'anim-left' : isRight ? 'anim-right' : 'anim-fade');
+      element.style.transitionDelay = `${Math.min(index % 5, 4) * 70}ms`;
     });
     document.documentElement.classList.add('anim-ready');
 
