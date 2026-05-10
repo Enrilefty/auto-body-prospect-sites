@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.story-photo',
     '.contact-card',
     '.footer-cta-panel',
-    '.footer-col'
+    '.footer-col',
+    '.metric-card'
   ];
   const animatedElements = Array.from(document.querySelectorAll(animatedSelectors.join(',')))
     .filter((element) => !element.closest('.mobile-menu'));
@@ -75,10 +76,47 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.01, rootMargin: '0px 0px 260px 0px' });
+      }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
       animatedElements.forEach((element) => observer.observe(element));
     } else {
       animatedElements.forEach((element) => element.classList.add('visible'));
+    }
+  }
+
+
+  const counters = Array.from(document.querySelectorAll('[data-counter]'));
+  const finishCounter = (counter) => {
+    const target = Number(counter.dataset.count || counter.textContent || 0);
+    counter.textContent = String(target);
+    counter.classList.add('counted');
+  };
+  const animateCounter = (counter) => {
+    const target = Number(counter.dataset.count || 0);
+    const duration = 1050;
+    const start = performance.now();
+    counter.textContent = '0';
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = String(Math.round(target * eased));
+      if (progress < 1) requestAnimationFrame(step);
+      else finishCounter(counter);
+    };
+    requestAnimationFrame(step);
+  };
+  if (counters.length) {
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      counters.forEach(finishCounter);
+    } else {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.45 });
+      counters.forEach((counter) => counterObserver.observe(counter));
     }
   }
 
