@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onsite Auto | Mobile Mechanic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#bde9ff",
+                        "tertiary": "#73d2fa",
+                        "surface-dim": "#0e1323",
+                        "primary-container": "#628aff",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-surface": "#dee1f9",
+                        "surface-variant": "#2f3446",
+                        "on-primary": "#002979",
+                        "inverse-primary": "#0052dd",
+                        "surface-container-highest": "#2f3446",
+                        "surface-container": "#1a1f30",
+                        "on-error": "#690005",
+                        "on-tertiary": "#003546",
+                        "inverse-surface": "#dee1f9",
+                        "outline": "#8d90a1",
+                        "on-primary-fixed": "#00174c",
+                        "on-secondary-fixed-variant": "#930004",
+                        "error-container": "#93000a",
+                        "surface-tint": "#b4c5ff",
+                        "on-surface-variant": "#c3c6d8",
+                        "surface-bright": "#34394a",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#410001",
+                        "on-primary-fixed-variant": "#003da9",
+                        "on-secondary": "#690002",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-low": "#161b2b",
+                        "surface": "#0e1323",
+                        "tertiary-fixed-dim": "#73d2fa",
+                        "surface-container-lowest": "#080d1d",
+                        "inverse-on-surface": "#2b3041",
+                        "secondary": "#ffb4a9",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "secondary-container": "#a00106",
+                        "primary": "#b4c5ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-container": "#00060b",
+                        "on-error-container": "#ffdad6",
+                        "background": "#0e1323",
+                        "on-primary-container": "#00236a",
+                        "secondary-fixed": "#ffdad5",
+                        "outline-variant": "#424655",
+                        "tertiary-container": "#0081a5",
+                        "on-tertiary-fixed-variant": "#004d64",
+                        "on-background": "#dee1f9",
+                        "on-secondary-container": "#ffa99d",
+                        "surface-container-high": "#25293a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="hidden md:block docked full-width top-0 sticky z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-sm transition-colors duration-200">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-xl font-display font-bold tracking-tight text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+                Onsite Auto
+            </div>
+<nav class="flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label font-label text-sm" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label font-label text-sm" href="#">Process</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label font-label text-sm" href="#">Service Area</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label font-label text-sm" href="#">Reviews</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-label font-label text-sm" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2.5 border border-outline rounded-full text-on-surface font-label text-sm hover:bg-surface-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-base">call</span>
+                    Call us
+                </button>
+<button class="px-5 py-2.5 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-semibold hover:opacity-90 transition-opacity flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">sms</span>
+                    Text us
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-sm font-label text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Serving South Denver &amp; Littleton
+                </div>
+<h1 class="text-5xl md:text-6xl font-display font-bold leading-[1.1] text-on-surface tracking-tight">
+                    Mobile repairs <span class="text-primary block">without losing your day.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-body leading-relaxed max-w-xl">
+                    We bring premium diagnostics, maintenance, and expert repair help directly to your driveway or workplace. Transparent, professional, and built around your schedule.
+                </p>
+<div class="flex flex-wrap gap-3 pt-2">
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/50">
+<span class="material-symbols-outlined text-primary text-sm">home_work</span>
+<span class="text-sm font-label text-on-surface">Driveway/Workplace Service</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/50">
+<span class="material-symbols-outlined text-primary text-sm">troubleshoot</span>
+<span class="text-sm font-label text-on-surface">Transparent Diagnostics</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/50">
+<span class="material-symbols-outlined text-primary text-sm">calendar_clock</span>
+<span class="text-sm font-label text-on-surface">Same-Week Scheduling</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/50">
+<span class="material-symbols-outlined text-primary text-sm">no_crash</span>
+<span class="text-sm font-label text-on-surface">No Unnecessary Tow</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-6">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-display font-bold text-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-lg">
+                        Request Mobile Service
+                    </button>
+</div>
+</div>
+<div class="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden border border-outline-variant shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A highly detailed, professional photograph of a skilled mobile mechanic inspecting a modern car engine in a sunny suburban driveway. The mechanic is wearing a dark charcoal uniform, utilizing a diagnostic tablet. The scene is bright and professional, utilizing deep navy shadows and bright daylight to create a premium, trustworthy automotive service aesthetic consistent with the dark-mode layout palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcZbycHjmMdebrb0f9wzJejIpbKZhAb0WPJm4qG3sJ-TFQ6vj2mqojq2mKQdg2tttIJFY548gDcDxO1TfkYz8w2-w7dhH013bGSTz3aKRXsxfuNsPUXVRCz4TgNPX_66fki0ojjrNQSMHm2w7WQEI6zgbrXuNH4jy7WHwl0CGB7ayrzjTtTnvpILhpUZZJjPhBuaMM-NGyMSb1yccO6Vu7QuP1h5BiwN2sITKBa2Tc_-MsNyJcFnaDmuICs42kVGmV9VubOnE5M23u"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 via-transparent to-transparent"></div>
+</div>
+</section>
+<!-- Trust Strip -->
+<div class="w-full bg-surface-container-highest border-y border-outline-variant py-4">
+<div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm font-label text-on-surface-variant">
+<span class="flex items-center gap-2 font-medium text-primary"><span class="material-symbols-outlined text-base">location_on</span> Service Areas:</span>
+<span>Littleton</span>
+<span class="text-outline">•</span>
+<span>Centennial</span>
+<span class="text-outline">•</span>
+<span>Highlands Ranch</span>
+<span class="text-outline">•</span>
+<span>Englewood</span>
+<span class="text-outline">•</span>
+<span>Lakewood</span>
+<span class="text-outline">•</span>
+<span>South Denver</span>
+</div>
+</div>
+<!-- Service Fit (Bento Layout) -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-display font-bold text-on-surface mb-4">Honest assessments. Clear boundaries.</h2>
+<p class="text-on-surface-variant font-body max-w-2xl mx-auto">We don't take jobs we can't complete properly in your driveway. Here is exactly what mobile service is perfect for, and when you actually need a traditional shop.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Good Fit -->
+<div class="bg-surface-container rounded-2xl p-8 border border-outline-variant/50 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">done_all</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-on-surface flex items-center gap-3 mb-6">
+<span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">check</span>
+</span>
+                        Good fit for mobile
+                    </h3>
+<ul class="space-y-4 font-body text-on-surface-variant">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span> Check Engine Light Diagnostics</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span> Brake Pad &amp; Rotor Replacement</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span> Battery, Alternator &amp; Starter Swaps</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span> Fluid Maintenance &amp; Filters</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span> Light Suspension (Shocks/Struts)</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span> Comprehensive Pre-Purchase Inspections</li>
+</ul>
+</div>
+<!-- Shop/Tow Likely -->
+<div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-8xl text-error">warning</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-on-surface flex items-center gap-3 mb-6">
+<span class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-variant text-on-surface-variant">
+<span class="material-symbols-outlined">car_repair</span>
+</span>
+                        Shop or tow likely
+                    </h3>
+<ul class="space-y-4 font-body text-on-surface-variant">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-outline shrink-0 mt-0.5">info</span> Major Engine Teardowns / Rebuilds</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-outline shrink-0 mt-0.5">info</span> Full Transmission Replacements</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-outline shrink-0 mt-0.5">info</span> Jobs Requiring Heavy 2-Post Lifts</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-outline shrink-0 mt-0.5">info</span> Unsafe Roadside Alignments</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-outline shrink-0 mt-0.5">info</span> Frame Straightening &amp; Body Work</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Core Services (Asymmetric Rows) -->
+<section class="border-y border-outline-variant/50 bg-surface-container-lowest py-24">
+<div class="max-w-7xl mx-auto px-6 space-y-24">
+<!-- Row 1: Diagnostics -->
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8 relative aspect-video rounded-2xl overflow-hidden border border-outline-variant shadow-lg group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-resolution photograph of a professional diagnostic scanner tablet held by a mechanic inside a vehicle. The screen displays complex engine data. The lighting emphasizes the cool blue glow of the screen against the dark charcoal interior of the car, aligning perfectly with the site's high-contrast, premium technical aesthetic and navy color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPJfRcOMSI-QQWrrFaVPeVSsw89qeKznRpNuLshnkaw_wKYbXDiC4WQFFs3DPqbO9yEOUfPTzcAA10MgQGbhB4x47QK1roGrlYM5rWvNe8-7jOp3Jezm7TXDOSCqVBuCQ9ZbiK4nE6uHEkDqFPRZyeWsCvvF9e-08IyFiehBII4ykot2GBLnun9MgMz2zOdkevwqvinvHnSnmhUOFt1sMO_i1w_Xm4C05lS-VPmiJMuAHMJys_jW6bNa5yMLRg40CLoN4EsfhzrNGA"/>
+</div>
+<div class="lg:col-span-4 space-y-6">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">troubleshoot</span>
+</div>
+<h3 class="text-3xl font-display font-bold text-on-surface">Precision Diagnostics</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">Stop guessing what the check engine light means. We use dealer-level scanning tools to accurately pinpoint electrical and mechanical faults before any parts are swapped.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label hover:text-primary-fixed transition-colors" href="#">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Row 2: Brakes -->
+<div class="grid lg:grid-cols-12 gap-12 items-center flex-col-reverse lg:flex-row">
+<div class="lg:col-span-5 space-y-6 lg:order-1 order-2">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">tire_repair</span>
+</div>
+<h3 class="text-3xl font-display font-bold text-on-surface">Brake Repair &amp; Maintenance</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">Squeaking, grinding, or soft pedals resolved in your driveway. We replace pads, rotors, and flush brake fluid using premium OEM-equivalent parts to ensure your vehicle stops safely and reliably.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label hover:text-primary-fixed transition-colors" href="#">View brake services <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="lg:col-span-7 relative aspect-[4/3] rounded-2xl overflow-hidden border border-outline-variant shadow-lg group lg:order-2 order-1">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, highly detailed photo of a shiny, newly installed brake rotor and red caliper on a vehicle hub. The shot is taken from a low, dramatic angle to highlight the metallic textures and precision engineering. The lighting is crisp and technical, set against a dark background, complementing the site's editorial, high-contrast visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtq7QF97toR0T0JX6sZiLLUPex2zBRv8nz_X3KeB0zof1XQfg9gg-aCBpwDh-yjaej2gUA0EQBiq_LMX2lwnL5VTUOvr4yRZhR86nN8wWU5rYM34Vw3663KQlJGh11a_Gcw3bKvF9NIG6hxNFVCUPNtwIxr-VX2l2jMztVXPM16TWtpWWTtHry6K6c2uAey_87rJFJkmLjKYn8UU1rSyaAl7OJ0ezQN-bfZJ7LKjkp8eGTtFoO8gx17PMfjzHbO2vLoKgvJcxq_V6o"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Process -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+<h2 class="text-3xl md:text-4xl font-display font-bold text-center text-on-surface mb-16">How mobile repair works</h2>
+<div class="grid md:grid-cols-4 gap-8 relative">
+<!-- Connecting Line Desktop -->
+<div class="hidden md:block absolute top-8 left-[12%] right-[12%] h-[1px] bg-outline-variant"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container border-2 border-primary flex items-center justify-center text-xl font-display font-bold text-primary z-10">1</div>
+<h4 class="text-xl font-display font-bold text-on-surface">Symptoms</h4>
+<p class="text-sm font-body text-on-surface-variant">Call or text us describing the issue, noises, or dash lights.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline flex items-center justify-center text-xl font-display font-bold text-on-surface-variant z-10">2</div>
+<h4 class="text-xl font-display font-bold text-on-surface">Confirm Fit</h4>
+<p class="text-sm font-body text-on-surface-variant">We verify the job is suitable for a mobile environment and quote diagnostics.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline flex items-center justify-center text-xl font-display font-bold text-on-surface-variant z-10">3</div>
+<h4 class="text-xl font-display font-bold text-on-surface">Mobile Appointment</h4>
+<p class="text-sm font-body text-on-surface-variant">We arrive at your location, perform the diagnostic or approved repair.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline flex items-center justify-center text-xl font-display font-bold text-on-surface-variant z-10">4</div>
+<h4 class="text-xl font-display font-bold text-on-surface">Next Steps</h4>
+<p class="text-sm font-body text-on-surface-variant">Test drive, final invoice, and secure digital payment. You're back on the road.</p>
+</div>
+</div>
+</section>
+<!-- Service Area Map Panel -->
+<section class="max-w-5xl mx-auto px-6 py-12">
+<div class="bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant shadow-2xl flex flex-col md:flex-row">
+<div class="md:w-2/5 p-10 flex flex-col justify-center space-y-6">
+<h2 class="text-3xl font-display font-bold text-on-surface">Local to South Denver.</h2>
+<p class="text-on-surface-variant font-body">We are based in Littleton and intentionally keep our service radius tight to ensure prompt arrival times and dedicated service for our neighbors.</p>
+<ul class="space-y-2 font-label text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span> Littleton</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span> Highlands Ranch</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span> Centennial &amp; Englewood</li>
+</ul>
+</div>
+<div class="md:w-3/5 h-64 md:h-auto bg-surface-variant relative">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A stylized, overhead satellite map view of Littleton, Colorado suburbs. The map is heavily tinted in dark navy and charcoal tones to match the dark-mode UI, with subtle, glowing blue overlays indicating service regions. The aesthetic is clean, technical, and abstract, avoiding bright, distracting map colors." data-location="Littleton, Colorado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Ir2SAtu8iua5ulzs5z4n-80i7pH6uGOGQ78KahEo0AhFs2ZtI70kVI8xpitLyg4AWSN9tXgnuqBsjkWUzgU73Ma-ZR5ZGwB0cR0RlA6Jj8x0vyB4lTCOkOsTiUmgiEBMv51kSIrE_Az59be9oeNZVxeoN-hOMIg1FylfQGSMc_UKd_EnIz1_JJp7JDUt7ksY8oKT0AqYpSiXOuDq9dl2MP4bLPSI6qd9OYMOAxXmp_U3xj6wRg1ZoyGKBYUD71moBgqh5dklULkB"/>
+</div>
+</div>
+</section>
+<!-- Story / Local Trust -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto px-6 text-center space-y-8">
+<span class="material-symbols-outlined text-4xl text-outline-variant">format_quote</span>
+<p class="text-xl md:text-2xl font-body leading-relaxed text-on-surface font-medium">
+                    "The traditional auto repair model forces you to waste a day off, sit in a dreary waiting room, or coordinate complex drop-offs. We built Onsite Auto to deliver professional, ASE-standard mechanical work directly to where you already are."
+                </p>
+<div class="flex items-center justify-center gap-4 pt-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<span class="material-symbols-outlined w-full h-full flex items-center justify-center text-on-surface-variant text-2xl">person</span>
+</div>
+<div class="text-left">
+<div class="font-display font-bold text-on-surface">Lead Technician</div>
+<div class="font-label text-sm text-on-surface-variant">Onsite Auto Repair</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="max-w-4xl mx-auto px-6 py-24 text-center">
+<div class="bg-primary-container text-on-primary-container rounded-3xl p-12 shadow-2xl relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+<h2 class="text-4xl font-display font-bold mb-6 relative z-10">Skip the tow truck.</h2>
+<p class="text-lg opacity-90 mb-10 max-w-xl mx-auto font-body relative z-10">Get a transparent quote and schedule your mobile repair today. Fast responses during normal business hours.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<button class="px-8 py-4 bg-background text-on-background rounded-xl font-display font-bold text-lg hover:bg-surface-variant transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">call</span>
+                        Call us
+                    </button>
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-xl font-display font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sms</span>
+                        Text us
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim py-12 bg-surface-container-lowest border-t border-outline-variant text-body-sm font-body">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4 md:col-span-1">
+<div class="text-lg font-display font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+                    Onsite Auto
+                </div>
+<p class="text-on-surface-variant max-w-xs">Littleton &amp; South Denver's Premium Mobile Mechanic.</p>
+</div>
+<div class="space-y-4">
+<h4 class="text-headline-sm font-display font-bold text-on-surface">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Diagnostics</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Brake Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Maintenance</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Fleet Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-headline-sm font-display font-bold text-on-surface">Business</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Service Area</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-primary outline-none" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-headline-sm font-display font-bold text-on-surface">Contact</h4>
+<div class="flex flex-col gap-3">
+<button class="w-full px-4 py-2 bg-surface-container border border-outline rounded-lg text-on-surface font-label text-sm hover:bg-surface-variant transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span> Call
+                    </button>
+<button class="w-full px-4 py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label text-sm font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">sms</span> Text
+                    </button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-outline-variant/30 text-center text-on-surface-variant">
+            © 2024 Onsite Auto. Littleton &amp; South Denver's Premium Mobile Mechanic.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe z-50 bg-surface-container-high border-t border-outline-variant shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">call</span>
+<span class="text-label-sm font-label text-xs">Call</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1.5 shadow-sm active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined mb-0.5" style="font-variation-settings: 'FILL' 1;">sms</span>
+<span class="text-label-sm font-label text-xs font-semibold">Text</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="text-label-sm font-label text-xs">Book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">menu</span>
+<span class="text-label-sm font-label text-xs">Menu</span>
+</a>
+</nav>
+</body></html>
