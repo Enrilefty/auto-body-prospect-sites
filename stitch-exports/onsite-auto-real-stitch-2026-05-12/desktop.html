@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onsite Auto - Mobile Auto Repair in Littleton &amp; South Denver</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-dim": "#0e1323",
+                "primary-fixed-dim": "#b4c5ff",
+                "on-tertiary-container": "#00060b",
+                "on-secondary": "#690002",
+                "on-background": "#dee1f9",
+                "error": "#ffb4ab",
+                "on-surface": "#dee1f9",
+                "surface-container-low": "#161b2b",
+                "surface-container-highest": "#2f3446",
+                "on-tertiary-fixed-variant": "#004d64",
+                "on-primary-fixed": "#00174c",
+                "secondary-fixed-dim": "#ffb4a9",
+                "on-surface-variant": "#c3c6d8",
+                "outline-variant": "#424655",
+                "outline": "#8d90a1",
+                "surface-variant": "#2f3446",
+                "on-secondary-container": "#ffa99d",
+                "on-primary": "#002979",
+                "secondary-container": "#a00106",
+                "surface-tint": "#b4c5ff",
+                "tertiary": "#73d2fa",
+                "surface-bright": "#34394a",
+                "primary": "#b4c5ff",
+                "on-tertiary": "#003546",
+                "tertiary-fixed": "#bde9ff",
+                "tertiary-container": "#0081a5",
+                "on-tertiary-fixed": "#001f2a",
+                "error-container": "#93000a",
+                "on-secondary-fixed": "#410001",
+                "secondary": "#ffb4a9",
+                "secondary-fixed": "#ffdad5",
+                "on-primary-fixed-variant": "#003da9",
+                "background": "#0e1323",
+                "tertiary-fixed-dim": "#73d2fa",
+                "surface-container": "#1a1f30",
+                "surface": "#0e1323",
+                "primary-fixed": "#dbe1ff",
+                "inverse-primary": "#0052dd",
+                "surface-container-lowest": "#080d1d",
+                "surface-container-high": "#25293a",
+                "primary-container": "#628aff",
+                "inverse-on-surface": "#2b3041",
+                "on-primary-container": "#00236a",
+                "inverse-surface": "#dee1f9",
+                "on-error-container": "#ffdad6",
+                "on-error": "#690005",
+                "on-secondary-fixed-variant": "#930004"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {},
+        "fontFamily": {
+                "headline": [
+                        "Space Grotesk"
+                ],
+                "display": [
+                        "Space Grotesk"
+                ],
+                "body": [
+                        "Inter"
+                ],
+                "label": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {}
+},
+    },
+  }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined', sans-serif;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col pt-16">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-dim/95 backdrop-blur-md border-b border-outline-variant shadow-sm transition-all">
+<div class="flex justify-between items-center h-16 px-4 md:px-12 max-w-7xl mx-auto">
+<div class="font-headline text-xl font-black tracking-tight text-on-surface dark:text-on-surface">Onsite Auto</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline font-bold text-headline-sm" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline font-bold text-headline-sm" href="#process">Process</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline font-bold text-headline-sm" href="#area">Area</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline font-bold text-headline-sm" href="#reviews">Reviews</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 text-primary dark:text-primary-fixed-dim hover:bg-surface-container-highest/50 transition-all px-4 py-2 rounded-full font-body text-body-md active:scale-95 duration-150">
+<span class="material-symbols-outlined">call</span>
+                    Call us
+                </button>
+<button class="bg-secondary-container text-on-secondary-container hover:bg-secondary-container/90 px-6 py-2 rounded-full font-body text-body-md font-medium transition-all active:scale-95 duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined">sms</span>
+                    Text us
+                </button>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center pt-24 pb-16 px-6 lg:px-12 overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img alt="Mobile auto repair" class="w-full h-full object-cover opacity-20" data-alt="A high-quality, cinematic shot of a professional mechanic working on a car engine outdoors in a residential driveway. The lighting is moody and dramatic with deep navy shadows and technical blue highlights. The scene conveys trust, expertise, and the convenience of mobile auto repair. The aesthetic is premium dark mode, aligning with a modern local service brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKPvpC-DauppJkfzh4XHiiilxDSfZWNMdFvmOHKh3-kkAsbwiycb4CpmllEOBOp8STTlxzzMN7ZymHcvawFTSpaEIfB0x-GoTxk69LZA9sfEGt1dohDCaCmozBOhZ8DMCkTgN7AcuVq8Cm0vEtxAb5ovu3LbKVcTKn3wFGdDfsRYOIDi0qaZ_IDY6LTZwOZoQsoK-pktdRf-x10JE45_oohbutHDzwdrabeY_ihw2ZFGLqP_mhvwLa19WOv35KXDQakBxJ0zeml3mf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/50 to-transparent md:via-surface-container-lowest/80"></div>
+</div>
+<div class="max-w-7xl mx-auto w-full relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block py-1 px-3 rounded-full bg-surface-container-highest border border-outline-variant text-primary font-medium text-sm mb-6 flex items-center w-max gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        Professional Diagnostic &amp; Repair
+                    </span>
+<h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+                        Mobile auto repair that comes to you in <span class="text-primary-fixed-dim">Littleton &amp; South Denver</span>.
+                    </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-body">
+                        Skip the tow truck and the waiting room. We provide expert diagnostics, routine maintenance, and skilled repairs right in your driveway or workplace. Practical, transparent, and built for your convenience.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary-container text-on-secondary-container hover:bg-secondary-container/90 px-8 py-4 rounded-lg font-headline text-lg font-bold transition-all active:scale-95 duration-150 flex justify-center items-center gap-3 w-full sm:w-auto shadow-lg shadow-secondary-container/20">
+<span class="material-symbols-outlined">call</span>
+                            Call us
+                        </button>
+<button class="bg-surface-container-high border border-outline-variant text-on-surface hover:bg-surface-container-highest px-8 py-4 rounded-lg font-headline text-lg font-bold transition-all active:scale-95 duration-150 flex justify-center items-center gap-3 w-full sm:w-auto">
+<span class="material-symbols-outlined">sms</span>
+                            Text us
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Row -->
+<section class="py-12 bg-surface-container border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-highest rounded-lg text-primary-fixed-dim shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-1">Littleton &amp; South Denver</h3>
+<p class="text-sm text-on-surface-variant">Local dedicated service</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-highest rounded-lg text-primary-fixed-dim shrink-0">
+<span class="material-symbols-outlined">home_work</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-1">Driveway Service</h3>
+<p class="text-sm text-on-surface-variant">We come to your location</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-highest rounded-lg text-primary-fixed-dim shrink-0">
+<span class="material-symbols-outlined">troubleshoot</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-1">Transparent Diagnostics</h3>
+<p class="text-sm text-on-surface-variant">Clear explanations, no upselling</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-highest rounded-lg text-primary-fixed-dim shrink-0">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-1">Same-week Scheduling</h3>
+<p class="text-sm text-on-surface-variant">Fast response times</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-auto border-t border-outline-variant bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 py-12 md:px-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline text-lg font-bold text-primary mb-4">Onsite Auto</div>
+<p class="font-body text-label-md text-on-surface-variant max-w-xs mb-6">
+                        © 2024 Onsite Auto. Serving Littleton &amp; South Denver. No-Tow Convenience.
+                    </p>
+</div>
+<div>
+<h4 class="font-headline text-headline-xs text-on-surface mb-4">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Services</a></li>
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Process</a></li>
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Service Area</a></li>
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Reviews</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-headline-xs text-on-surface mb-4">Support</h4>
+<ul class="space-y-3">
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Contact Us</a></li>
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Service Limitations</a></li>
+<li><a class="font-body text-label-md text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-headline-xs text-on-surface mb-4">Contact</h4>
+<button class="w-full mb-3 bg-surface-container-highest border border-outline-variant text-on-surface hover:bg-primary-container hover:text-on-primary-container px-4 py-3 rounded font-body text-sm font-medium transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span> Call us
+                     </button>
+<button class="w-full bg-secondary-container text-on-secondary-container hover:bg-secondary-container/90 px-4 py-3 rounded font-body text-sm font-medium transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">sms</span> Text us
+                     </button>
+</div>
+</div>
+</footer>
+</main>
+</body></html>
