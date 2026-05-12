@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const animatedSelectors = [
-    '.section > .wrap',
     '.section-head',
     '.card',
     '.service-card',
@@ -54,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.premium-service-card',
     '.route-strip > *',
     '.proof-ledger > *',
+    '.service-proof-card',
+    '.hero-service-panel',
     '.process .card',
     '.process-steps article',
     '.feature-band',
@@ -74,9 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!reduceMotion && animatedElements.length) {
     animatedElements.forEach((element, index) => {
       const isPhoto = element.classList.contains('story-photo');
-      const isPanel = element.classList.contains('footer-cta-panel') || element.classList.contains('feature-band');
-      const isLeft = isPhoto || element.matches('.route-strip > *:nth-child(odd)') || element.matches('.process .card:nth-child(odd)');
-      const isRight = element.matches('.route-strip > *:nth-child(even)') || element.matches('.process .card:nth-child(even)') || element.classList.contains('contact-card');
+      const isPanel = element.classList.contains('footer-cta-panel') || element.classList.contains('feature-band') || element.classList.contains('hero-service-panel');
+      const isLeft = isPhoto || element.matches('.route-strip > *:nth-child(odd)') || element.matches('.process .card:nth-child(odd)') || element.matches('.service-proof-card:nth-child(odd)');
+      const isRight = element.matches('.route-strip > *:nth-child(even)') || element.matches('.process .card:nth-child(even)') || element.matches('.service-proof-card:nth-child(even)') || element.classList.contains('contact-card');
       element.classList.add(isPanel ? 'anim-scale' : isLeft ? 'anim-left' : isRight ? 'anim-right' : 'anim-fade');
       element.style.transitionDelay = `${Math.min(index % 5, 4) * 70}ms`;
     });
