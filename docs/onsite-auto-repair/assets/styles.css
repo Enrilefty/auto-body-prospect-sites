@@ -369,3 +369,113 @@ html.anim-ready .anim-scale.visible{opacity:1!important;transform:none!important
 html.anim-ready .hero-service-panel.anim-scale.visible{transform:translateY(-14px)!important}
 @media(max-width:700px){@keyframes onsitePanelIn{0%{opacity:0;transform:translateY(18px) scale(.97)}100%{opacity:1;transform:none}}.hero-service-panel:hover{transform:none!important}html.anim-ready .hero-service-panel.anim-scale.visible{transform:none!important}.hero-premium .hero-copy-block .kicker,.hero-premium .hero-copy-block h1,.hero-premium .hero-copy-block .hero-copy,.hero-premium .hero-actions,.hero-premium .hero-phone-line,.hero-premium .hero-proof-list li{animation-duration:.52s}}
 @media(prefers-reduced-motion:reduce){.hero-premium .hero-copy-block .kicker,.hero-premium .hero-copy-block h1,.hero-premium .hero-copy-block .hero-copy,.hero-premium .hero-actions,.hero-premium .hero-phone-line,.hero-premium .hero-proof-list li,.hero-service-panel,.service-proof-card::after{animation:none!important}html.anim-ready .anim-fade,html.anim-ready .anim-left,html.anim-ready .anim-right,html.anim-ready .anim-scale{opacity:1!important;transform:none!important}.service-proof-card:hover,.hero-service-panel:hover{transform:none!important}}
+
+/* Enri feedback pass: bigger real header mark, less bubble clutter on mobile, actual scroll-reveal motion. */
+.nav .top-logo-full{
+  width:224px!important;
+  height:auto!important;
+  max-width:min(30vw,224px)!important;
+  max-height:54px!important;
+  flex:0 0 auto!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 10px 20px rgba(0,0,0,.34))!important;
+}
+.nav .top-logo-text{display:none!important}
+.mobile-menu .top-logo-full{
+  width:204px!important;
+  height:auto!important;
+  max-width:62vw!important;
+  max-height:50px!important;
+  flex:0 0 auto!important;
+  object-fit:contain!important;
+}
+.mobile-menu .top-logo-text{display:none!important}
+
+html.anim-ready .anim-fade,
+html.anim-ready .anim-left,
+html.anim-ready .anim-right,
+html.anim-ready .anim-scale{
+  opacity:.68!important;
+  filter:blur(2px);
+  transition:opacity .72s cubic-bezier(.22,1,.36,1),transform .72s cubic-bezier(.22,1,.36,1),filter .72s cubic-bezier(.22,1,.36,1)!important;
+}
+html.anim-ready .anim-fade.visible,
+html.anim-ready .anim-left.visible,
+html.anim-ready .anim-right.visible,
+html.anim-ready .anim-scale.visible{
+  opacity:1!important;
+  filter:none!important;
+  transform:none!important;
+}
+html.anim-ready .hero-service-panel.anim-scale.visible{transform:translateY(-14px)!important}
+
+@media(max-width:700px){
+  .nav .top-logo-full{width:176px!important;max-width:calc(100vw - 114px)!important;max-height:42px!important}
+  .mobile-menu .top-logo-full{width:190px!important;max-width:64vw!important;max-height:46px!important}
+  .hero-premium{padding-top:48px!important}
+  .hero-premium .hero-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px 14px!important;align-items:center!important;margin-top:20px!important}
+  .hero-premium .hero-actions .button.primary{grid-column:1/-1!important;min-height:52px!important;border-radius:14px!important}
+  .hero-premium .hero-actions .button.gold,
+  .hero-premium .hero-actions .button:not(.primary):not(.gold){
+    min-height:auto!important;
+    width:auto!important;
+    padding:3px 0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    color:#0b111a!important;
+    box-shadow:none!important;
+    text-decoration:underline!important;
+    text-underline-offset:4px!important;
+    justify-content:flex-start!important;
+    font-size:13px!important;
+  }
+  .hero-premium .hero-actions .button:not(.primary):not(.gold){justify-content:flex-end!important}
+  html.anim-ready .anim-left,
+  html.anim-ready .anim-right{transform:translateY(28px)!important}
+  .offer-bar-inner{flex-wrap:wrap!important;line-height:1.35!important;padding:6px 0!important}
+  .offer-bar a{white-space:nowrap!important}
+  .hero-service-panel{display:none!important}
+  .hero-proof-list{
+    display:grid!important;
+    gap:8px!important;
+    margin-top:18px!important;
+    padding-top:14px!important;
+    border-top:1px solid rgba(11,17,26,.12)!important;
+    max-width:none!important;
+  }
+  .hero-proof-list li{
+    width:auto!important;
+    display:flex!important;
+    align-items:flex-start!important;
+    gap:9px!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+  }
+  .hero-proof-list li::before{content:"✓";color:#d72732;font-weight:950;line-height:1.05}
+  .hero-proof-list strong{color:#0b111a!important;font-size:13px!important;line-height:1.1!important;letter-spacing:.005em!important}
+  .hero-proof-list span{display:none!important}
+  .service-proof-dock{padding-top:10px!important;padding-bottom:30px!important;background:#fff!important}
+  .service-proof-grid{border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;overflow:visible!important}
+  .service-proof-card{min-height:0!important;padding:16px 0!important;border-left:0!important;border-top:1px solid #d9e1eb!important;background:transparent!important;box-shadow:none!important}
+  .service-proof-card:first-child{border-top:0!important}
+  .service-proof-intro{background:transparent!important;color:#0b111a!important;padding-bottom:18px!important}
+  .service-proof-intro span{color:#d72732!important;margin-bottom:8px!important}
+  .service-proof-intro strong{color:#0b111a!important;font-size:28px!important;line-height:.98!important}
+  .service-proof-card b{display:inline-block!important;margin:0 12px 0 0!important;font-size:30px!important;vertical-align:middle!important}
+  .service-proof-card strong{display:inline!important;color:#111827!important;letter-spacing:.055em!important}
+  .service-proof-card span{margin-top:8px!important;font-size:13px!important}
+  .service-proof-card:hover{transform:none!important;background:transparent!important}
+  html.anim-ready .hero-service-panel.anim-scale.visible{transform:none!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html.anim-ready .anim-fade,
+  html.anim-ready .anim-left,
+  html.anim-ready .anim-right,
+  html.anim-ready .anim-scale{opacity:1!important;transform:none!important}
+}
